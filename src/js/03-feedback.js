@@ -22,10 +22,11 @@ function onFormSubmit(event) {
 
   const email = event.target.email.value;
   const message = event.target.message.value;
-
-  if (email === "" || message === "") {
-        return alert("Всі поля повинні бути заповнені!!!");
-      }
+  console.log(email);
+  console.log(message);
+  if (email === '' || message === '') {
+    return alert('Всі поля повинні бути заповнені!!!');
+  }
 
   event.target.reset();
   console.log(formData);
@@ -37,8 +38,8 @@ function fillForm() {
   const parsedData = JSON.parse(savedData);
 
   if (savedData) {
+    formData = parsedData;
     formRef.email.value = parsedData.email ?? '';
     formRef.message.value = parsedData.message ?? '';
   }
 }
-
