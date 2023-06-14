@@ -22,8 +22,6 @@ function onFormSubmit(event) {
 
   const email = event.target.email.value;
   const message = event.target.message.value;
-  console.log(email);
-  console.log(message);
   if (email === '' || message === '') {
     return alert('Всі поля повинні бути заповнені!!!');
   }
